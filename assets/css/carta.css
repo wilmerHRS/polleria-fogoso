@@ -1,0 +1,417 @@
+@import url("https://fonts.googleapis.com/css2?family=Inder&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --primary-color: #ff4444;
+  --secundary-color: #fef3b8;
+  --primary-text-color: #fff;
+  --nav-link-text-color: #9c412d;
+  --modal-user-color: rgba(255, 68, 68, 0.71);
+  --primary-font: "Inder";
+  --secondary-font: "Poppins";
+}
+
+/* Titulo */
+
+.main-title {
+  padding-top: 2%;
+  text-align: center;
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: var(--primary-color);
+  font-size: 5rem;
+  font-family: var(--primary-font);
+}
+
+#title::before {
+  position: absolute;
+  top: 110%;
+  content: "";
+  height: 3px;
+  width: 65rem;
+  background-color: var(--primary-color);
+}
+
+/* Barra de navegacion */
+
+.barraNavegacion {
+  padding: 5.5rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.mainFilter {
+  display: flex;
+  gap: 50rem;
+}
+
+#comboBoxOpc {
+  font-size: 2rem;
+  font-family: var(--primary-font);
+  width: 35rem;
+  height: 5rem;
+  cursor: pointer;
+  padding: 0 2rem;
+  outline: none;
+  border-color: var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+#comboBoxOpc option {
+  font-size: 2rem;
+  font-family: var(--primary-font);
+}
+
+#inputBuscar {
+  width: 25rem;
+  height: 5rem;
+  font-size: 2rem;
+  font-family: var(--primary-font);
+  padding: 0 1.5rem;
+  border-radius: 0.8rem 0 0 0.8rem;
+  border: none;
+  border-width: 1px 0px 1px 1px;
+  border-color: var(--primary-color);
+  border-style: solid;
+  outline: none;
+}
+
+.busqueda {
+  display: flex;
+  align-content: center;
+}
+
+#btnBuscar {
+  background-color: var(--primary-color);
+  border: none;
+  border-width: 1px 1px 1px 1px;
+  border-color: var(--primary-color);
+  border-style: solid;
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+  border-radius: 0 0.8rem 0.8rem 0;
+}
+
+.bx-search {
+  font-size: 3rem;
+  color: white;
+}
+
+/* Carta */
+
+.main-carta {
+  display: grid;
+  grid-gap: 5rem;
+  grid-template-columns: repeat(3, 35rem);
+  grid-auto-rows: 45rem;
+  padding: 3rem 10rem;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.opcCarta {
+  background: rgba(255, 255, 255, 0.891);
+  border-radius: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.228) 0em 0.1em 0em 0.2em;
+}
+
+.mainImg {
+  width: 100%;
+  height: 55%;
+}
+
+.image {
+  background-image: url(../img/carta/pollo-a-la-brasa-peruano.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  border-radius: 1.5rem 1.5rem 0 0;
+}
+
+.descripcion {
+  padding: 1.5rem 2rem;
+}
+
+.descripcion ul {
+  list-style: none;
+}
+
+.descripcion li {
+  font-size: 1.5rem;
+  font-family: var(--secondary-font);
+  padding: 0 2rem;
+}
+
+.titleDescripcion {
+  font-family: var(--primary-font);
+  font-size: 2rem;
+  padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.selection {
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+
+.btnSeleccionar {
+  font-family: var(--secondary-font);
+  font-size: 1.6rem;
+  width: 18rem;
+  height: 3.5rem;
+  border: none;
+  background: var(--primary-color);
+  border-radius: 0.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+.precio {
+  font-family: var(--secondary-font);
+  font-size: 2.2rem;
+}
+
+.NumPag {
+  align-content: center;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Barra de navegación entre paginas */
+.NumPag {
+  padding: 9rem 0;
+}
+
+.barraAB ul {
+  width: 60rem;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.barraAB button {
+  border: none;
+  border-radius: 1rem;
+}
+
+.btnNum {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  font-family: var(--secondary-font);
+  color: #b2b2b2;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btnNum--active {
+  font-size: 1.6rem;
+  font-family: var(--secondary-font);
+  background: var(--primary-color);
+  color: white;
+  cursor: pointer;
+}
+
+.btnAfterPag {
+  width: 10rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  font-family: var(--secondary-font);
+  color: #b2b2b2;
+  background: transparent;
+  cursor: pointer;
+}
+
+.btnBeforePag {
+  width: 10rem;
+  height: 4rem;
+  background: transparent;
+  font-size: 1.6rem;
+  font-family: var(--secondary-font);
+  color: #b2b2b2;
+  cursor: pointer;
+}
+
+.btnBeforePagSimbolo,
+.btnAfterPagSimbolo {
+  width: auto;
+  background: transparent;
+  cursor: pointer;
+}
+
+.bx-chevron-left,
+.bx-chevron-right {
+  color: var(--primary-color);
+  font-size: 5rem;
+}
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1260px) {
+  .main-carta {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(2, 35rem);
+    grid-auto-rows: 45rem;
+    padding: 3rem 10rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* -------------  */
+
+  .mainFilter {
+    display: flex;
+    gap: 10rem;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .main-title {
+    padding-top: 2%;
+    text-align: center;
+  }
+
+  #title {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    font-family: var(--primary-font);
+  }
+
+  #title::before {
+    position: absolute;
+    top: 110%;
+    content: "";
+    height: 3px;
+    width: 30rem;
+    background-color: var(--primary-color);
+  }
+
+  /* ------------------ */
+  .main-carta {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: repeat(1, 35rem);
+    grid-auto-rows: 45rem;
+    padding: 3rem 10rem;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  /* -------------  */
+
+  .barraNavegacion {
+    /* padding: 5.5rem 0; */
+    display: flex;
+  }
+
+  .mainFilter {
+    display: block;
+  }
+
+  #comboBoxOpc {
+    font-size: 2rem;
+    font-family: var(--primary-font);
+    width: 30rem;
+    height: 5rem;
+    cursor: pointer;
+    outline: none;
+    border-color: var(--primary-color);
+    border-radius: 0.5rem;
+  }
+
+  #comboBoxOpc option {
+    font-size: 1.2rem;
+    font-family: var(--primary-font);
+  }
+
+  .busqueda {
+    padding-top: 4rem;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .bx-search {
+    font-size: 3rem;
+    color: white;
+  }
+
+  /* ----------- */
+
+  .NumPag {
+    padding: 9rem 0;
+  }
+
+  .barraAB ul {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+  }
+
+  .barraAB button {
+    border: none;
+    border-radius: 0.5rem;
+  }
+
+  .btnNum {
+    width: 3rem;
+    height: 3rem;
+    font-size: 2.2rem;
+    font-family: var(--secondary-font);
+    color: #b2b2b2;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .btnNum:focus {
+    font-size: 2.2rem;
+    font-family: var(--secondary-font);
+    background: var(--primary-color);
+    color: white;
+    cursor: pointer;
+  }
+
+  .btnAfterPag {
+    width: 10rem;
+    height: 3rem;
+    font-size: 2.2rem;
+    font-family: var(--secondary-font);
+    color: #b2b2b2;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .btnBeforePag {
+    width: 10rem;
+    height: 3rem;
+    background: transparent;
+    font-size: 2.2rem;
+    font-family: var(--secondary-font);
+    color: #b2b2b2;
+    cursor: pointer;
+  }
+
+  .btnBeforePagSimbolo,
+  .btnAfterPagSimbolo {
+    width: auto;
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .bx-chevron-left,
+  .bx-chevron-right {
+    color: var(--primary-color);
+    font-size: 3.2rem;
+  }
+}

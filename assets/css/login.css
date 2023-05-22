@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* !Estilo de prueba, ya sabes que hacer manin :3 */
+.main{
+    margin: 0;
+    height: 100vh;
+}
+.main__container{
+    font-family: Poppins;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: auto;
+}
+
+.login__container{
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 40px;
+    gap: 30px;
+    border: 2px solid #FFA7A7;
+    border-radius: 10px;
+}
+
+.login__container h1{
+    text-align: center;
+    width: 100%;
+    font-size: 35px;
+    color: #A9766B;
+}
+.main__input{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main__input p{
+    font-size: 15px;
+    text-align: left;
+    color: #656565;
+    font-size: 14px;
+}
+.user__input{
+    margin-top: 5px;
+    width: 100%;
+    height: 35px;
+    background-color: #EDEDED;
+    border: 1px solid #C1C1C1;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    padding: 0 10px;
+}
+
+a{
+    text-decoration: none;
+    color:#FF7777;
+    font-size: 14px;
+    margin: 0 auto;
+}
+.main__forget{
+    display: flex;
+}
+.btn{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    background: #FFE9E9;
+    color: #2d2d2d;
+    margin: 10px auto;  
+    outline: none;
+    border: 1px solid #FF7777;
+    font-size: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+.btn:hover{
+    background: #FF7777;
+    color: #fff;
+    transition: .2s;
+}

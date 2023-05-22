@@ -1,0 +1,270 @@
+/* 
+    ! Fuentes a utilizar 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Inder&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --primary-color: #FF4444;
+    --secundary-color: #FEF3B8;
+    --primary-text-color: #fff;
+    --nav-link-text-color: #9C412D;
+    --modal-user-color: rgba(255,68,68,.71);
+    --primary-font: 'Inder';
+    --secondary-font: 'Poppins';
+}
+*{
+    font-size: 10px;
+}
+
+
+/* 
+    * Estilos del nav
+*/
+
+.nav{
+    display: flex;
+    background-color: var(--primary-color);
+    height: 7rem;
+    justify-content: center;
+}
+
+.nav__content{
+    display: flex;
+    width: 100%;
+    max-width: 136.6rem;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 2.5rem;
+}
+
+.nav__logo h1{
+    font-family: var(--primary-font),sans-serif;
+    font-size: 4rem;
+    margin: 0;
+    color: var(--primary-text-color);
+    font-weight: 100;
+}
+.nav__logo h1 span{
+    font-family: var(--primary-font),sans-serif;
+    color: var(--secundary-color);
+    font-size: 2rem;
+}
+
+.nav__links{
+    display: flex;
+    gap: 4.5rem;
+    max-height: 3.7rem;
+}
+
+.nav__link{
+    background-color: transparent;
+    padding: .7rem 1.9rem;
+    border-radius: 2rem;
+}
+
+.nav__link a{
+    display: flex;
+    justify-content: center;
+    font-family: var(--primary-font),sans-serif;
+    font-size: 2rem;
+    text-decoration: none;
+    color: var(--primary-text-color);
+    position: relative;
+}
+.nav__link a::after{
+    content: "";
+    background-color: var(--primary-text-color);
+    height: .2rem;
+    width: 0;
+    position: absolute;
+    top: 100%;
+    transition: .2s;
+}
+.nav__link a::after{
+    opacity: 0;
+    transition: .3s;
+}
+.nav__link a:hover::after{
+    width: 120%;
+    transition: .3s;
+    opacity: 1;
+}
+
+.nav__link--active{
+    background-color: var(--secundary-color);
+}
+.nav__link--active a{
+    color: var(--nav-link-text-color);
+}
+.nav__link--active a::after{
+    background-color: transparent;
+}
+
+.nav__user{
+    width: 4.5rem;
+    position: relative;
+}
+.nav__user i{
+    color: var(--secundary-color);
+    font-size: 4.5rem;
+    top: -.3rem;
+    position: absolute;
+    transition: .3s;
+}
+.nav__user i:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav__burguer{
+    display: none;
+    background-image: url('../img/nav/chicken.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    width: 0;
+    height: 5rem;
+    margin: auto;
+    padding: .4rem;
+    border-radius: .7rem;
+    transition: .2s;
+}
+
+.nav__burguer--pressed{
+    background-image: url('../img/nav/chikenPressed.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    width: 0;
+    transition: .2s;
+}
+
+/* ! SubNav Styles */
+/* 
+    * Popup
+ */
+.subnav{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    max-width: 142rem;
+    height: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 7rem;
+    margin: 0 auto;
+    overflow: hidden;
+    z-index: 99;
+}
+.popup{
+    display: flex;
+    background-image: url('../img/nav/popupBg.svg');
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 0;
+    width: 19.2rem;
+    margin-right: 4.5rem;
+    backdrop-filter: blur(.12rem);
+    transition: .2s;
+    opacity: 0;
+}
+
+.popup__links{
+    display: flex;
+    flex-direction: column;
+    margin: auto auto;
+    padding-top: 1.5rem;
+    gap: 1.5rem;
+}
+.popup__link{
+    font-family: var(--secondary-font),sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    color: #fff;
+    text-decoration: none;
+}
+.popup__link:hover{
+    color: var(--secundary-color);
+}
+
+.subnav--active{
+    height: auto;
+}
+.popup__link--active{
+    color: var(--secundary-color);
+}
+
+.popup--active{
+    opacity: 1;
+    transition: .4s;
+    height: 11.5rem;
+}
+.subnav--active{
+    height: auto;
+}
+
+/* 
+    * Mobile nav Styles
+*/
+.mobilenav{
+    display: flex;
+    width: 100%;
+    height: 0;
+    background-color: var(--modal-user-color);
+    backdrop-filter: blur(.12rem);
+    position: absolute;
+    transition: .2s;
+    overflow: hidden;
+    z-index: 99;
+}
+.mobilenav__links{
+    display: inline-flex;
+    flex-direction: column;
+    margin: 4rem auto;
+    gap: 2.5rem;
+}
+.mobilenav__link{
+    color: var(--primary-text-color);
+    text-decoration: none;
+    text-align: center;
+    font-family: var(--secondary-font),sans-serif;
+    font-weight: 300;
+    font-size: 2.5rem;
+}
+.mobilenav__link:hover{
+    color: var(--secundary-color);
+}
+
+.mobilenav--active{
+    height: 32.375rem;
+    transition: .2s;
+}
+
+.mobilenav__link--active{
+    color: var(--secundary-color);
+}
+
+/* ! Media querys */
+
+@media screen and (max-width: 990px) {
+    .nav__links{
+        display: none;
+    }
+    .nav__burguer,.nav__burguer--pressed{
+        display: block;
+        width: 6rem;
+        margin-right: 2.5rem;
+        cursor: pointer;
+    }
+    .nav__burguer:hover,.nav__burguer--pressed:hover{
+        border: 2px solid #FEF3B8;
+    }
+}
+@media screen and (max-width: 560px) {
+    .nav__logo h1 span{
+        display: none;
+    } 
+}

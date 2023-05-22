@@ -1,0 +1,140 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.main__container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-register{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    height: 590px;
+    padding: 40px;
+    margin: 0 0;
+    gap: 40px;
+}
+
+.cajas{
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cajas__input h2{
+    color: #878787;
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+}
+.cajas__input input{
+    font-family: 'Poppins',sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    outline: none;
+    width: 290px;
+    height: 35px;
+    padding: 0 10px;
+    border-radius: 5px;
+    border: 1px solid #C1C1C1;
+    color: #2D2D2D;
+}
+.cajas__input input::placeholder{
+    color: #7473738a;
+}
+
+.titulo{
+    color: #A9766B;
+    font-size: 35px;
+    font-weight: 620;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.form-register__terminos{
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    gap: 10px;
+}
+.form-register__terminos input{
+    width: 15px;
+    height: 15px;
+}
+.form-register__terminos label{
+    font-family: 'Poppins',sans-serif;
+    font-size: 15px;
+    color: #878787;
+    cursor: pointer;
+}
+
+.form-register__btn{
+    margin: 0 auto;
+    width: 250px;
+    height: 50px;
+    font-family: 'Poppins',sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #2D2D2D;
+    background-color: #FFE9E9;
+    border: 1px solid #FF4444;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.form-register__btn:hover{
+    background-color: #FF4444;
+    color: #fff;
+    transition: .2s;
+}
+.form-register__btn:active{
+    color: #2D2D2D;
+    background-color: #FFE9E9;
+}
+
+
+@media screen and (max-width: 720px) {
+    .form-register{
+        width: 100%;
+        height: 100%;
+    }
+
+    .cajas{
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    .titulo{
+        text-align: center;
+    }
+}
+
+@media screen and (min-height: 943px) {
+    .main{
+        height: calc(100vh - 354px);
+    }
+}
+
+
+
+
+
+
+
+
+
+
